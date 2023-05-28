@@ -1,4 +1,3 @@
-import pyautogui
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -84,10 +83,6 @@ with st.sidebar:
     else:
         # Filter to Tiantan station
         filtered_df = df_all[df_all["station"] == "Tiantan"]
-
-    if st.button("Reset"):
-        pyautogui.hotkey("ctrl", "F5")
-
 
 main_df = filtered_df[(filtered_df["date"] >= str(start_date)) &
                       (filtered_df["date"] <= str(end_date))]
